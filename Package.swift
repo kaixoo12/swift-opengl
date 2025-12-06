@@ -8,5 +8,5 @@ let package = Package(
                     .executable(name: "generator", targets: ["generator"])],
     dependencies:  [.package(url: "https://github.com/kelvin13/swiftxml", exact: "1.0.0")],
     targets:       [.target(name: "GL"        , dependencies: []      , path: "sources/opengl"),
-                    .target(name: "generator" , dependencies: ["XML"] , path: "sources/generator")]
+                    .target(name: "generator" , dependencies: ["swiftxml"] , path: "sources/generator")]
 )
